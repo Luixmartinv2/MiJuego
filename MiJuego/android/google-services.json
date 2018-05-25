@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "413556711858",
+    "firebase_url": "https://examendiciembreandroid.firebaseio.com",
+    "project_id": "examendiciembreandroid",
+    "storage_bucket": "examendiciembreandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413556711858:android:cf17b1c9edb3df2a",
+        "android_client_info": {
+          "package_name": "com.androide.leers.examen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413556711858-um9at48elvg0vkg6eieajv4fgfo0pa5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbEd98TtJlfDVmxab8PUvvf8wptLFQTz0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
