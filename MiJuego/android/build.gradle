@@ -19,7 +19,8 @@ android {
     }
     defaultConfig {
         applicationId "com.mijuego"
-        minSdkVersion 9
+        //cambiamos la version aqui porque sino se sobrescribe en el "AndroidManifest.xml"
+        minSdkVersion 14
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"

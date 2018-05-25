@@ -1,27 +1,39 @@
 {
   "project_info": {
-    "project_number": "413556711858",
-    "firebase_url": "https://examendiciembreandroid.firebaseio.com",
-    "project_id": "examendiciembreandroid",
-    "storage_bucket": "examendiciembreandroid.appspot.com"
+    "project_number": "775520307291",
+    "firebase_url": "https://mijuego-1b4ac.firebaseio.com",
+    "project_id": "mijuego-1b4ac",
+    "storage_bucket": "mijuego-1b4ac.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:413556711858:android:cf17b1c9edb3df2a",
+        "mobilesdk_app_id": "1:775520307291:android:710b10dcd5ef113b",
         "android_client_info": {
-          "package_name": "com.androide.leers.examen"
+          "package_name": "com.mijuego"
         }
       },
       "oauth_client": [
         {
-          "client_id": "413556711858-um9at48elvg0vkg6eieajv4fgfo0pa5u.apps.googleusercontent.com",
+          "client_id": "775520307291-g2vubh4t4sq2f7mn0tqa3534ct4tgkpp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mijuego",
+            "certificate_hash": "c8154605b1bb25668cc6ed5639aeb9967fdaf497"
+          }
+        },
+        {
+          "client_id": "775520307291-tm399m13r30eu61lncj0fl4gqn9mqn6q.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "775520307291-tm399m13r30eu61lncj0fl4gqn9mqn6q.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBbEd98TtJlfDVmxab8PUvvf8wptLFQTz0"
+          "current_key": "AIzaSyDLpZrZYyDrmpqbRh2quDEZhMvkouIiJ_g"
         }
       ],
       "services": {
@@ -29,8 +41,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775520307291-tm399m13r30eu61lncj0fl4gqn9mqn6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
