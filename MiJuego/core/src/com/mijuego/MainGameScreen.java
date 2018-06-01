@@ -12,14 +12,15 @@ import com.mijuego.actors.ActorPelota;
 
 public class MainGameScreen extends BaseScreen {
 
-    public MainGameScreen(MiJuego J) {
-        super(J);
-        Texture TexPelota = new Texture("pelota.png");
-    }
-
     private ActorPelota P;
     private Stage stage;
-    private int v=0,x=1,z, g=0,aux1=0,aux2=0;
+    private int v=0,x=1,z=0, g=0,aux1=0,aux2=0;
+
+    public MainGameScreen(MiJuego J, int z) {
+        super(J);
+        z= this.z;
+        Texture TexPelota = new Texture("pelota.png");
+    }
 
     @Override
     public void show() {
@@ -37,12 +38,17 @@ public class MainGameScreen extends BaseScreen {
         //dejamos de base la grabedad
         aux1=(width );aux2=(height);
         if (v<1){
-            //if(v>)
             P.setPosition(aux1/ 2, aux2/ 2);
         } else if (width==0){
             //aqui fin de juego
         } else if (v>0){
-            P.setPosition(aux1-x, aux2);
+
+            if(v==10){
+                v=v-9;
+                z++;
+            }
+
+            P.setPosition(aux1-(x*z), aux2);
         }
 
 

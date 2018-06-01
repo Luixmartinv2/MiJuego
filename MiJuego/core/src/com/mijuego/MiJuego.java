@@ -11,7 +11,7 @@ public class MiJuego extends Game {
 	//sirve para dibujar todas las texturas a
 	SpriteBatch batch;
 	Texture img;
-	public int width, height;
+	public int width, height, z, v=0;
 	private int widthP, heightP;
 
 
@@ -19,7 +19,7 @@ public class MiJuego extends Game {
 	@Override
 	public void create () {
 		//declaramos MainGameScreen
-		setScreen(new MainGameScreen(this));
+		setScreen(new MainGameScreen(this,z));
 
 		//ELIMINAMOS LA CLASE PROCESADOR
 		/*
@@ -51,7 +51,30 @@ public class MiJuego extends Game {
 		System.out.println("toque");
 		}
 
+		if(z==1){
+			//cuando limpia deja el color que se especifique 0/1
+			Gdx.gl.glClearColor(1, 0, 0, 1);
+		} else if(z==2){
+			//cuando limpia deja el color que se especifique 0/1
+			Gdx.gl.glClearColor(0, 1, 0, 1);
+		} else if(z==3){
+			//cuando limpia deja el color que se especifique 0/1
+			Gdx.gl.glClearColor(0, 0, 1, 1);
+		} else if(z<11){
+			float F=(z/10);
+			//cuando limpia deja el color que se especifique 0/1
+			Gdx.gl.glClearColor(F, F, F, 1);
+		}else{
+			int auxC = 0;
+			for (int i = z; i >11; i--) {
+				v++;
+				auxC=z;
+			}
+			float f1=(auxC/(10-z)),f2=(auxC/(10-z)),f3=(auxC/(10-z));
 
+			//cuando limpia deja el color que se especifique 0/1
+			Gdx.gl.glClearColor(f1, f2, f3, 1);
+		}
 		//cuando limpia deja el color que se especifique 0/1
 		Gdx.gl.glClearColor(1, 0, 0, 1);
 		//limpia la pantalla sino surgen problemas
