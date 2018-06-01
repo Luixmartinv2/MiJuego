@@ -14,6 +14,7 @@ public class MiJuego extends Game {
 	public int width, height;
 	private int widthP, heightP;
 
+
 	//constructor de libgdx
 	@Override
 	public void create () {
@@ -25,7 +26,7 @@ public class MiJuego extends Game {
 		Gdx.input.setInputProcessor(P);
 
 		//llamamos a la img que necesitamos
-		img = new Texture("pelota.jpg");
+		//img = new Texture("pelota.jpg");
 		batch = new SpriteBatch();
 		/*Cambio de sitio.
 		//ancho de la pantalla. X

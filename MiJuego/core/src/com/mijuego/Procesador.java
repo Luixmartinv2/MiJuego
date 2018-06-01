@@ -1,7 +1,9 @@
 package com.mijuego;
 
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
+import com.mijuego.actors.ActorPelota;
 
 /**
  * Created by luixmartinv2 on 30/5/18.
@@ -12,6 +14,18 @@ implementamos la interfaz InputProcessor de libgdx para gestionar cosas aparte.
  */
 
 public class Procesador implements InputProcessor {
+
+    private ActorPelota P;
+    private MainGameScreen MGS;
+    private MiJuego J;
+
+    Procesador(){
+        P = new ActorPelota();
+        J= new MiJuego();
+        MGS = new MainGameScreen(J);
+
+    }
+
     //cosas que se hacen cuando tocas la pantalla.
     @Override
     public boolean keyDown(int keycode) {
@@ -32,7 +46,9 @@ public class Procesador implements InputProcessor {
     //keyDown para teclado
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-        System.out.println("has tocado en "+screenX+" "+screenY);
+       /* System.out.println("has tocado en "+screenX+" "+screenY);
+        Gdx.input.justTouched();
+        P.setPosition(screenX,screenY);*/
         return true;
     }
 
