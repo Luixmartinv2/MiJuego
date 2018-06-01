@@ -1,7 +1,7 @@
 package com.mijuego;
 
 
-import com.badlogic.gdx.Gdx;
+/*import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.mijuego.actors.ActorPelota;
 
@@ -13,7 +13,7 @@ import com.mijuego.actors.ActorPelota;
 implementamos la interfaz InputProcessor de libgdx para gestionar cosas aparte.
  */
 
-public class Procesador implements InputProcessor {
+/*public class Procesador implements InputProcessor {
 
     private ActorPelota P;
     private MainGameScreen MGS;
@@ -49,7 +49,7 @@ public class Procesador implements InputProcessor {
        /* System.out.println("has tocado en "+screenX+" "+screenY);
         Gdx.input.justTouched();
         P.setPosition(screenX,screenY);*/
-        return true;
+   /*     return true;
     }
 
     //keyUp para teclado
@@ -75,3 +75,4 @@ public class Procesador implements InputProcessor {
         return false;
     }
 }
+*/

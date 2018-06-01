@@ -21,9 +21,13 @@ public class MiJuego extends Game {
 		//declaramos MainGameScreen
 		setScreen(new MainGameScreen(this));
 
+		//ELIMINAMOS LA CLASE PROCESADOR
+		/*
+		el procesador es muy potente, pero es para cosas mas complejas.
+		 */
 		//declaramos el procesador.
-		Procesador P = new Procesador();
-		Gdx.input.setInputProcessor(P);
+		/*Procesador P = new Procesador();
+		Gdx.input.setInputProcessor(P);*/
 
 		//llamamos a la img que necesitamos
 		//img = new Texture("pelota.jpg");
