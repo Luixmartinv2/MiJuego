@@ -14,11 +14,12 @@ public class MainGameScreen extends BaseScreen {
 
     private ActorPelota P;
     private Stage stage;
-    private int v=0,x=1,z=0, g=0,aux1=0,aux2=0;
+    private int v=0,x=1, g=0,aux1=0,aux2=0;
+    public int z=0;
 
-    public MainGameScreen(MiJuego J, int z) {
+    public MainGameScreen(MiJuego J) {
         super(J);
-        z= this.z;
+
         Texture TexPelota = new Texture("pelota.png");
     }
 

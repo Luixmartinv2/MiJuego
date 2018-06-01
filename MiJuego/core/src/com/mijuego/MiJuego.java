@@ -9,17 +9,20 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 //Game es como el InputAdapter pero te permite empezar en otra pantalla.
 public class MiJuego extends Game {
 	//sirve para dibujar todas las texturas a
+	MainGameScreen m = new MainGameScreen(this);
 	SpriteBatch batch;
 	Texture img;
-	public int width, height, z, v=0;
+	public int width, height, z=m.z, v=0;
 	private int widthP, heightP;
+
+
 
 
 	//constructor de libgdx
 	@Override
 	public void create () {
 		//declaramos MainGameScreen
-		setScreen(new MainGameScreen(this,z));
+		setScreen(new MainGameScreen(this));
 
 		//ELIMINAMOS LA CLASE PROCESADOR
 		/*
