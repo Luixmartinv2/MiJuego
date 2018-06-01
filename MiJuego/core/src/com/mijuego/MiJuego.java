@@ -1,30 +1,38 @@
 package com.mijuego;
 
-import com.badlogic.gdx.ApplicationAdapter;
+
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
-public class MiJuego extends ApplicationAdapter {
+//Game es como el InputAdapter pero te permite empezar en otra pantalla.
+public class MiJuego extends Game {
 	//sirve para dibujar todas las texturas a
 	SpriteBatch batch;
 	Texture img;
-	private int width, height;
+	public int width, height;
 	private int widthP, heightP;
 
 	//constructor de libgdx
 	@Override
 	public void create () {
+		//declaramos MainGameScreen
+		setScreen(new MainGameScreen(this));
+
+		//declaramos el procesador.
+		Procesador P = new Procesador();
+		Gdx.input.setInputProcessor(P);
 
 		//llamamos a la img que necesitamos
 		img = new Texture("pelota.jpg");
 		batch = new SpriteBatch();
+		/*Cambio de sitio.
 		//ancho de la pantalla. X
 		width = Gdx.graphics.getBackBufferWidth();
 		//alto de la pantalla. Y
 		height = Gdx.graphics.getBackBufferHeight();
-
+		*/
 		//ancho de la img X
 		widthP = img.getWidth();
 		//alto de la img Y
