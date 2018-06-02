@@ -42,6 +42,7 @@ public class MainGameScreen extends BaseScreen {
             P.setPosition(aux1/ 2, aux2/ 2);
         } else if (width==0){
             //aqui fin de juego
+            
         } else if (v>0){
 
             if(v==10){

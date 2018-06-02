@@ -78,10 +78,13 @@ public class MiJuego extends Game {
 			//cuando limpia deja el color que se especifique 0/1
 			Gdx.gl.glClearColor(f1, f2, f3, 1);
 		}
+		/*
 		//cuando limpia deja el color que se especifique 0/1
 		Gdx.gl.glClearColor(1, 0, 0, 1);
 		//limpia la pantalla sino surgen problemas
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		*/
+
 		//llamamos a las imagenes
 		batch.begin();
 		//dibuja la img en medio y del tamaño especificado
