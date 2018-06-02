@@ -12,6 +12,7 @@ import com.mijuego.actors.ActorPelota;
 
 public class MainGameScreen extends BaseScreen {
 
+
     private ActorPelota P;
     private Stage stage;
     private int v=0,x=1, g=0,aux1=0,aux2=0;
@@ -19,6 +20,7 @@ public class MainGameScreen extends BaseScreen {
 
     public MainGameScreen(MiJuego J) {
         super(J);
+
 
         Texture TexPelota = new Texture("pelota.png");
     }

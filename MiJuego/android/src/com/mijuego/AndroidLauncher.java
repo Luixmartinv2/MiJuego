@@ -15,7 +15,7 @@ public class AndroidLauncher extends AndroidApplication {
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.layout);
+		//setContentView(R.layout.layout);
 
 		//necesario
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();

@@ -9,10 +9,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 //Game es como el InputAdapter pero te permite empezar en otra pantalla.
 public class MiJuego extends Game {
 	//sirve para dibujar todas las texturas a
-	MainGameScreen m = new MainGameScreen(this);
+//	MainGameScreen m = new MainGameScreen(this);
 	SpriteBatch batch;
 	Texture img;
-	public int width, height, z=m.z, v=0;
+	public int width, height, z=0, v=0;
 	private int widthP, heightP;
 
 
@@ -57,23 +57,32 @@ public class MiJuego extends Game {
 		if(z==1){
 			//cuando limpia deja el color que se especifique 0/1
 			Gdx.gl.glClearColor(1, 0, 0, 1);
+			z++;
 		} else if(z==2){
 			//cuando limpia deja el color que se especifique 0/1
 			Gdx.gl.glClearColor(0, 1, 0, 1);
+			z++;
 		} else if(z==3){
 			//cuando limpia deja el color que se especifique 0/1
 			Gdx.gl.glClearColor(0, 0, 1, 1);
+			z++;
 		} else if(z<11){
 			float F=(z/10);
 			//cuando limpia deja el color que se especifique 0/1
 			Gdx.gl.glClearColor(F, F, F, 1);
+			z++;
 		}else{
-			int auxC = 0;
-			for (int i = z; i >11; i--) {
-				v++;
-				auxC=z;
+
+			for (int i = 1; i >11; i++) {
+
+				z++;
+				if(z>10){
+					z-=10;
+					v++;
+				}
+
 			}
-			float f1=(auxC/(10-z)),f2=(auxC/(10-z)),f3=(auxC/(10-z));
+			float f1=(1/(v-z)),f2=(1/(v-z)),f3=(1/(v-z));
 
 			//cuando limpia deja el color que se especifique 0/1
 			Gdx.gl.glClearColor(f1, f2, f3, 1);
