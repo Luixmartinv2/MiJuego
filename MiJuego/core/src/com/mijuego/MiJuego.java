@@ -13,7 +13,7 @@ public class MiJuego extends Game {
 	SpriteBatch batch;
 	Texture img;
 	public int width, height, z=0, v=0;
-	private int widthP, heightP;
+	//private int widthP, heightP;
 
 
 
@@ -42,9 +42,9 @@ public class MiJuego extends Game {
 		height = Gdx.graphics.getBackBufferHeight();
 		*/
 		//ancho de la img X
-		widthP = img.getWidth();
+		//widthP = img.getWidth();
 		//alto de la img Y
-		heightP = img.getHeight();
+		//heightP = img.getHeight();
 	}
 	//aqui se procesan las imagenes
 	@Override
@@ -99,6 +99,11 @@ public class MiJuego extends Game {
 		//dibuja la img en medio y del tamaño especificado
 		batch.draw(img, width/2, height/2,100,100);
 		//usa lo declarado con anterioridad
+		try {
+			batch.wait(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		batch.end();
 	}
 	//esto sirve para liberar los recursos que hemos utilizado
