@@ -24,6 +24,8 @@ public class MiJuego extends Game {
 		//declaramos MainGameScreen
 		setScreen(new MainGameScreen(this));
 
+		batch = new SpriteBatch();
+
 		//ELIMINAMOS LA CLASE PROCESADOR
 		/*
 		el procesador es muy potente, pero es para cosas mas complejas.
@@ -34,7 +36,7 @@ public class MiJuego extends Game {
 
 		//llamamos a la img que necesitamos
 		//img = new Texture("pelota.jpg");
-		batch = new SpriteBatch();
+
 		/*Cambio de sitio.
 		//ancho de la pantalla. X
 		width = Gdx.graphics.getBackBufferWidth();
@@ -46,6 +48,7 @@ public class MiJuego extends Game {
 		//alto de la img Y
 		//heightP = img.getHeight();
 	}
+
 	//aqui se procesan las imagenes
 	@Override
 	public void render () {
@@ -73,7 +76,7 @@ public class MiJuego extends Game {
 			z++;
 		}else{
 
-			for (int i = 1; i >11; i++) {
+			for (int i = 1; i <11; i++) {
 
 				z++;
 				if(z>10){

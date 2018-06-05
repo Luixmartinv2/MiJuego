@@ -13,3 +13,17 @@ Comenzamos con la configuracion de firebase.
 7. nos pide modificar gradle, ya modificado.
 8. comprobamos que se conecta, y esperamos a que firebase nos de confirmacion.
 9. nos aparece el mensaje "¡Felicitaciones! Agregaste Firebase a tu app correctamente."
+
+#Commit 13
+
+Creamos un documento ".json", para la gestion de informacion de la app.
+le damos el nombre de "MiJuego.json" y lo rellenamos:
+{
+  "users": {
+    "user": {
+      "name": "Luis",
+      "record": 1000,
+      "mail": "luixmartinv2@gmail.com"
+    }
+  }
+}
