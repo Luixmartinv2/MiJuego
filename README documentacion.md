@@ -23,7 +23,7 @@ le damos el nombre de "MiJuego.json" y lo rellenamos:
     "user": {
       "name": "Luis",
       "password":"1234a",
-      "record": 1000,
+      "record": "1000",
       "mail": "luixmartinv2@gmail.com"
     }
   }

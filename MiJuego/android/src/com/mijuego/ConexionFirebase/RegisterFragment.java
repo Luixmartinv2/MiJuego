@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.mijuego.Fin;
 import com.mijuego.R;
 
 
@@ -29,6 +30,7 @@ public class RegisterFragment extends Fragment {
     public Button btnRBack;
     public Button btnROK;
     public RegisterFragmentListener listener;
+
 
 
     public RegisterFragment() {
@@ -63,6 +65,7 @@ public class RegisterFragment extends Fragment {
 class RegisterFragmentEvents implements View.OnClickListener{
     private RegisterFragment registerFragment;
 
+    Fin fin;
     //Se pasa la referencia por parámetro y se inicializa la variable
     public RegisterFragmentEvents (RegisterFragment fragment){
         this.registerFragment = fragment;
@@ -77,5 +80,12 @@ class RegisterFragmentEvents implements View.OnClickListener{
             this.registerFragment.listener.RegisterFragmentOKButtonClicked(this.registerFragment.txtfRUser.getText().toString()
                     ,this.registerFragment.txtfRPass.getText().toString());
         }
+    }
+
+    private void Puntuacion(){
+        //cogemos la puntuacion final par mandarla al json
+        String p = ""+fin.Puntuacion;
+
+
     }
 }
