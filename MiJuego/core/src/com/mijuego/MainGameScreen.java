@@ -12,7 +12,7 @@ import com.mijuego.actors.ActorPelota;
 
 public class MainGameScreen extends BaseScreen {
 
-
+    private Fin fin;
     private ActorPelota P;
     private Stage stage;
     private int v=0,x=1, g=0,aux1=0,aux2=0;
@@ -44,7 +44,8 @@ public class MainGameScreen extends BaseScreen {
             P.setPosition(aux1/ 2, aux2/ 2);
         } else if (width==0){
             //aqui fin de juego
-            
+            fin.fin();
+
         } else if (v>0){
 
             if(v==10){
@@ -52,7 +53,7 @@ public class MainGameScreen extends BaseScreen {
                 z++;
             }
 
-            P.setPosition(aux1-(x*z), aux2);
+            P.setPosition(aux1-(x*z), aux2-(x*z));
         }
 
 
