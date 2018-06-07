@@ -82,6 +82,7 @@ class RegisterFragmentEvents implements View.OnClickListener{
         }
     }
 
+
     private void Puntuacion(){
         //cogemos la puntuacion final par mandarla al json
         String p = ""+fin.Puntuacion;
