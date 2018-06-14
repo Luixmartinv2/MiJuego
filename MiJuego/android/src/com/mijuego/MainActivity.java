@@ -7,12 +7,20 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+
+import com.google.firebase.database.DataSnapshot;
 import com.mijuego.ConexionFirebase.DataHolder;
+import com.mijuego.ConexionFirebase.FireBaseAdmin;
 import com.mijuego.ConexionFirebase.FireBaseAdminListener;
+import com.mijuego.ConexionFirebase.LoginFragment;
 import com.mijuego.ConexionFirebase.LoginFragmentListener;
+import com.mijuego.ConexionFirebase.RegisterFragment;
 import com.mijuego.ConexionFirebase.RegisterFragmentListener;
 
 public class MainActivity extends AppCompatActivity {
+
+    LoginFragment loginFragment;
+    RegisterFragment registerFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        DataHolder.instance.fireBaseAdmin = new DataHolder.FireBaseAdmin();
+        DataHolder.instance.fireBaseAdmin = new FireBaseAdmin();
 //Creamos objeto y le pasamos la referencia
         MainActivityEvents events = new MainActivityEvents(this);
         DataHolder.instance.fireBaseAdmin.setListener(events);
@@ -88,7 +96,7 @@ class MainActivityEvents implements LoginFragmentListener, RegisterFragmentListe
         Log.v("MAINACTIVITYEVENTS: ", "RESULTADO DE REGISTER:" + blOK);
         if(blOK){
             //Se crea un objeto intent indicamos el activity de origen y el de destino
-            Intent intent = new Intent(mainActivity,SecondActivity.class);
+            Intent intent = new Intent(mainActivity,AndroidLauncher.class);
             //Iniciamos el segundoactivity desde el primero
             mainActivity.startActivity(intent);
             //Matamos al primer activity
@@ -102,7 +110,7 @@ class MainActivityEvents implements LoginFragmentListener, RegisterFragmentListe
     public void fireBaseAdmin_LoginOK(boolean blOK) {
         Log.v("MAINACTIVITYEVENTS: ","RESULTADO DE LOGIN:"+blOK);
         if(blOK){
-            Intent intent = new Intent(mainActivity,SecondActivity.class);
+            Intent intent = new Intent(mainActivity,AndroidLauncher.class);
             mainActivity.startActivity(intent);
             mainActivity.finish();
         }else{

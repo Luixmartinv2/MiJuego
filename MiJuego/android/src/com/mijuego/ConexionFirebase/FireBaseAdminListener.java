@@ -1,5 +1,7 @@
 package com.mijuego.ConexionFirebase;
 
+import com.google.firebase.database.DataSnapshot;
+
 /**
  * Created by luixmartinv2 on 6/6/18.
  */
@@ -14,4 +16,3 @@ package com.mijuego.ConexionFirebase;
         public void fireBaseAdmin_LoginOK(boolean blOK);
         public void fireBaseAdmin_ramaDescargada(String rama, DataSnapshot dataSnapshot);
     }
-}
