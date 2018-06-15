@@ -28,13 +28,23 @@ public class MainActivity extends AppCompatActivity {
         //pasamos el layout de login y comenzamos
         setContentView(R.layout.activity_main);
 
+        loginFragment = (LoginFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentLogin);
+        registerFragment = (RegisterFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentRegister);
+
 
         DataHolder.instance.fireBaseAdmin = new FireBaseAdmin();
-//Creamos objeto y le pasamos la referencia
+        //Creamos objeto y le pasamos la referencia
         MainActivityEvents events = new MainActivityEvents(this);
+        loginFragment.setListener(events);
+        registerFragment.setListener(events);
         DataHolder.instance.fireBaseAdmin.setListener(events);
-//Esto te logea en firebase con ese usuario y pass
-        DataHolder.instance.fireBaseAdmin.loginWithUserNPass("tester@tester.com", "tester", this);
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.show(loginFragment);
+        transaction.hide(registerFragment);
+        transaction.commit();
+
+        DataHolder.instance.fireBaseAdmin.loginWithUserNPass("luixmartinv2@gmail.com", "123456", this);
 
     }
 }
@@ -96,7 +106,7 @@ class MainActivityEvents implements LoginFragmentListener, RegisterFragmentListe
         Log.v("MAINACTIVITYEVENTS: ", "RESULTADO DE REGISTER:" + blOK);
         if(blOK){
             //Se crea un objeto intent indicamos el activity de origen y el de destino
-            Intent intent = new Intent(mainActivity,AndroidLauncher.class);
+            Intent intent = new Intent(mainActivity,SecondActivity.class);
             //Iniciamos el segundoactivity desde el primero
             mainActivity.startActivity(intent);
             //Matamos al primer activity
@@ -110,7 +120,7 @@ class MainActivityEvents implements LoginFragmentListener, RegisterFragmentListe
     public void fireBaseAdmin_LoginOK(boolean blOK) {
         Log.v("MAINACTIVITYEVENTS: ","RESULTADO DE LOGIN:"+blOK);
         if(blOK){
-            Intent intent = new Intent(mainActivity,AndroidLauncher.class);
+            Intent intent = new Intent(mainActivity,SecondActivity.class);
             mainActivity.startActivity(intent);
             mainActivity.finish();
         }else{

@@ -4,26 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mijuego.MainActivity">
-
-
-    <fragment
-        android:id="@+id/fragmentLogin"
-        android:name="com.mijuego.ConexionFirebase.LoginFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context="com.mijuego.SecondActivity">
 
     <fragment
-        android:id="@+id/fragmentRegister"
-        android:name="com.mijuego.ConexionFirebase.RegisterFragment"
+        android:id="@+id/fragmentRecord"
+        android:name="com.mijuego.RecordFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="8dp"

@@ -15,6 +15,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import static android.content.ContentValues.TAG;
+
 /*
 *Se crea FireBaseAdmin en el proyecto y no en la librería porque FireBaseAdmin solo permite
 * conectarse en el módulo donde está añadido. Por ello debemos crearlo aquí. Sin embargo, podemos
@@ -97,7 +99,7 @@ public class FireBaseAdmin {
             public void onCancelled(DatabaseError error) {
                 listener.fireBaseAdmin_ramaDescargada(rama, null);
                 // Failed to read value
-                //Log.w(TAG, "Failed to read value.", error.toException());
+                Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
 
